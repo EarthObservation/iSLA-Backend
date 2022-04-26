@@ -1,5 +1,5 @@
 ## App specific
-services/qgis-server/data/*
+services/qgis-server/data/
 services/web/env
 services/web/logs/*
 services/web/project/config.py
