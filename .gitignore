@@ -12,7 +12,6 @@ services/qgis-server/data/*.tfw
 services/qgis-server/data/*.tif
 services/qgis-server/data/*.tif.aux.xml
 services/qgis-server/data/*.tif.ovr
-services/qgis-server/data/hs125.tif.ovr
 services/qgis-server/data/*.tif.vat.cpg
 services/qgis-server/data/*.tif.vat.dbf
 services/qgis-server/data/*.tif.xml
