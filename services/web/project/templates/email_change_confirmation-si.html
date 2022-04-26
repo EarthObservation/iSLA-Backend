@@ -1,0 +1,16 @@
+{# templates/email_change_confirmation.html #}
+<table style="background-color: #92b2d1; padding:20px 30px; width:100%;">
+    <tr>
+      <td width=70%>
+        <h1><font color="#2b2d2e" style="font-family:'Bahnschrift'">Pozdravljeni,</font></h1>
+        <h3><font color="#2b2d2e" style="font-family:'Bahnschrift'">vaš e-naslov je bil uspešno posodobljen.
+            <br>Potrebno je še zadnje dejanje z vaše strani. Prosimo kliknite na spodnjo povezavo. S tem bomo potrdili novi naslov in vam omogočili prijavo v aplikacijo:</font></h3>
+        <h5><a href="{{ confirm_url }}"><font color="#2b2d2e" style="font-family:'Bahnschrift'">{{ confirm_url }}</font></a><br></h5>
+        <h3><font color="#2b2d2e" style="font-family:'Bahnschrift'">Lep pozdrav</font></h3><br>
+        <h3><font color="#2b2d2e" style="font-family:'Bahnschrift'">iSLA</font></h3>
+      </td>
+      <td>
+          <img src="bg.svg" alt="" width=100%></img>
+      </td>
+    </tr>
+  </table>

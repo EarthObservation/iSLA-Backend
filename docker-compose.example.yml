@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  web:
+    build: ./services/web
+    command: python3 manage.py run -h 0.0.0.0
+    volumes:
+      - ./services/web/:/usr/src/isla
+    expose:
+      - 5000
+      - 25
+    env_file:
+      - ./.env.dev
+    depends_on:
+      - db
+  db:
+    image: postgres:13-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - data_dev_isla:/var/lib/postgresql/isla_data_dev/
+    environment:
+      - POSTGRES_USER=<DATABASE_USER>
+      - POSTGRES_PASSWORD=<DATABASE_PASS>
+      - POSTGRES_DB=<DATABASE_NAME>
+  nginx:
+    build: ./services/nginx
+    volumes:
+      - static_volume:/home/isla/web/project/static
+    ports:
+      - 1337:80
+    depends_on:
+      - web
+      - qgis-server
+  qgis-server:
+    build: ./services/qgis-server
+    expose:
+      - 5555
+    volumes:
+    - ./services/qgis-server/data:/data/
+    environment:
+    - LANG=en_EN.UTF-8
+    - QGIS_PROJECT_FILE=/data/sattiiaWMS.qgs
+    - QGIS_SERVER_LOG_LEVEL=0
+    - DEBUG=1
+volumes:
+  data_dev_sattilia:
+  static_volume:
