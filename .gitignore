@@ -1,21 +1,7 @@
 ## App specific
-services/qgis-server/data/*.cpg
-services/qgis-server/data/*.dbf
-services/qgis-server/data/*.prj
-services/qgis-server/data/*.qml
-services/qgis-server/data/*.sbn
-services/qgis-server/data/*.sbx
-services/qgis-server/data/*.shp
-services/qgis-server/data/*.shx
-services/qgis-server/data/hs125.*
-services/qgis-server/data/*.tfw
-services/qgis-server/data/*.tif
-services/qgis-server/data/*.tif.aux.xml
-services/qgis-server/data/*.tif.ovr
-services/qgis-server/data/*.tif.vat.cpg
-services/qgis-server/data/*.tif.vat.dbf
-services/qgis-server/data/*.tif.xml
-services/qgis-server/data/*.svg
+services/qgis-server/data/*
+!services/qgis-server/data/*.qgs
+!services/qgis-server/data/*.qgz
 services/web/env
 services/web/logs/*
 services/web/project/config.py
